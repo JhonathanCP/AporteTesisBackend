@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 
-mongoose.set('useFindAndModify', false);
+mongoose.set('useFindAndModify', true);
+mongoose.set('useCreateIndex', true);
 
 mongoose.connect("mongodb://localhost/companydb", {
     useNewUrlParser: true,

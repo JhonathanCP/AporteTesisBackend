@@ -1,1 +1,16 @@
-import for
+import User from '../models/User';
+
+export const signUp = async (req, res) => {
+    const { username, email, password, roles } = req.body;
+    new User({
+        username,
+        email,
+        password
+    })
+    console.log(req.body);
+    res.send('ra')
+}
+
+export const signIn = async (req, res) => {
+    res.send('ra')
+}

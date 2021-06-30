@@ -6,10 +6,11 @@ import authRoutes from './routes/auth.routes';
 import userRoutes from './routes/user.routes'
 import { createRoles } from './libs/initialSetup';
 
-
+const cors = require('cors')
 const app = express();
 createRoles();
 
+app.use(cors());
 app.use(express.json());
 
 app.get('/api', (req, res) => {

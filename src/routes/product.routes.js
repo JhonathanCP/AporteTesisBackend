@@ -8,6 +8,7 @@ import { authJwt } from '../middlewares';
 /* router.post('/',verifyToken ,createProduct); */
 router.post('/',[authJwt.verifyToken, authJwt.isModerator] ,createProduct);
 
+//sin middlewares
 router.get('/', getProducts);
 
 router.get('/:productId', getProductsById);
